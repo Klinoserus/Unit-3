@@ -4,7 +4,7 @@ public class Grade {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Current grade percentage");
+        System.out.println("Current grade percentage:");
         double current = scanner.nextDouble();
         System.out.println("Final weight percentage:");
         int weight = scanner.nextInt();
@@ -40,6 +40,8 @@ public class Grade {
             finalLetter = " (C)";
         } else if (minimum >= 60) {
             finalLetter = " (D)";
+        } else if (minimum > 0) {
+            finalLetter = " (F)";
         } else {
             finalLetter = " (Either you need to set your expectations higher or enter a real letter grade. And no, E does not count as 'excellent'.)";
         }
